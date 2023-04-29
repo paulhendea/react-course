@@ -18,7 +18,7 @@ const users = [
   }
 ]
 
-function App() {
+function App () {
   return (
     <section className="App">
       <h1 className="header">Twitter</h1>

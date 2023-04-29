@@ -3,14 +3,14 @@ import { ListOfGifs } from '../../components/ListOfGifs/ListOfGifs'
 import { useGifs } from '../../hooks/useGifs'
 import './Search.css'
 
-export function Search({ keyword }) {
+export function Search ({ keyword }) {
   const { loading, gifs } = useGifs({ keyword })
 
   return (
     <div className="Search">
       <h1 className="Search-title">{keyword}</h1>
-      {loading 
-        ? <Loading /> 
+      {loading
+        ? <Loading />
         : <ListOfGifs gifs={gifs} />}
     </div>
   )

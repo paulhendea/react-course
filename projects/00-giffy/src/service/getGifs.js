@@ -1,6 +1,6 @@
-import { API_KEY } from "./settings"
+import { API_KEY } from './settings'
 
-export function getGifs({ keyword = 'minion' } = {}) {
+export function getGifs ({ keyword = 'minion' } = {}) {
   const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=20&offset=0&rating=g&lang=en`
 
   return fetch(API_URL)

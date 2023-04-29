@@ -4,7 +4,7 @@ import { Search } from './pages/Search/Search'
 import { Detail } from './pages/Detail/Detail'
 import { GifsContextProvider } from './context/GifsContext'
 
-export function App() {
+export function App () {
   return (
     <div className="App">
       <Link to="/">

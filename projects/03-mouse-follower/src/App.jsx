@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Cursor } from './components/Cursor'
 
-function App() {
+function App () {
   const [effect, setEffect] = useState(false)
 
   const handleClick = () => {

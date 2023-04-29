@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { GifsContext } from '../../context/GifsContext'
 import { Gif } from '../../components/Gif/Gif'
 
-export function Detail({ id }) {
+export function Detail ({ id }) {
   const { gifs } = useContext(GifsContext)
 
   const gif = gifs.find((singleGif) => singleGif.id === id)

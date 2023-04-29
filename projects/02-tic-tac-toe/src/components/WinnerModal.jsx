@@ -1,6 +1,6 @@
-import { Square } from "./Square"
+import { Square } from './Square'
 
-export function WinnerModal({ gameState, resetGame }) {
+export function WinnerModal ({ gameState, resetGame }) {
   if (!gameState.isFinished) return null
 
   const winnerText = gameState.winner === null ? 'Draw' : 'Winner'

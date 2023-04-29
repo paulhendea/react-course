@@ -2,10 +2,11 @@ import { useState, useEffect, useContext } from 'react'
 import { getGifs } from '../service/getGifs'
 import { GifsContext } from '../context/GifsContext'
 
-export function useGifs({ keyword }) {
-  const {gifs, setGifs} = useContext(GifsContext)
+export function useGifs ({ keyword }) {
+  const { gifs, setGifs } = useContext(GifsContext)
   const [loading, setLoading] = useState(false)
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     setLoading(true)
     getGifs({ keyword }).then((gifs) => {

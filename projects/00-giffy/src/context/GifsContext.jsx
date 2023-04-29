@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
 const GifsContext = React.createContext({})
 
-function GifsContextProvider({ children }) {
+function GifsContextProvider ({ children }) {
   const [gifs, setGifs] = useState([])
-  return <GifsContext.Provider value={{gifs, setGifs}}>
+  return <GifsContext.Provider value={{ gifs, setGifs }}>
     {children}
   </GifsContext.Provider>
 }

@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
-import { getTrendingTerms } from "../../service/getTrendingTerms";
+import { useEffect, useState } from 'react'
+import { getTrendingTerms } from '../../service/getTrendingTerms'
 
-export function TrendingSearches() {
+export function TrendingSearches () {
   const [trends, setTrends] = useState([])
 
-  useEffect(function() {
+  useEffect(function () {
     getTrendingTerms().then(setTrends)
   }, [])
 
+  console.log(trends)
   // TODO
 }

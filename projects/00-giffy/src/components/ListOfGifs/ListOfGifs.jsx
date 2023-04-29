@@ -1,7 +1,7 @@
 import { Gif } from '../Gif/Gif'
 import './ListOfGifs.css'
 
-export function ListOfGifs({ gifs }) {
+export function ListOfGifs ({ gifs }) {
   return (
     <div className="GifList">
       {gifs.map(({ id, title, url }) => (

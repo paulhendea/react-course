@@ -7,9 +7,9 @@ import { ListOfGifs } from '../../components/ListOfGifs/ListOfGifs'
 
 const POPULAR_GIFS = ['Anime', 'Avengers', 'Cats', 'Minions']
 
-export function Home() {
+export function Home () {
   const [keyword, setKeyword] = useState('')
-  const [path, pushLocation] = useLocation()
+  const [, pushLocation] = useLocation()
 
   const { loading, gifs } = useGifs({ keyword: 'random' })
 
