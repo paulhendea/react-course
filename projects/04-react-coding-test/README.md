@@ -2,7 +2,7 @@
 
 APIs:
 
-- Random facts: https://catfacts.ninja/fact
+- Random facts: https://catfact.ninja/fact
 - Random image: https://cataas.com/cat/says/hello
 
 
