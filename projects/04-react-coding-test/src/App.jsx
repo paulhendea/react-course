@@ -22,7 +22,7 @@ export function App () {
           />
           )
         : null}
-      <button onClick={handleClick}>New fact</button>
+      <div><button onClick={handleClick}>New fact</button></div>
     </main>
   )
 }

@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint projects --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint projects --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "repository": {
     "type": "git",
