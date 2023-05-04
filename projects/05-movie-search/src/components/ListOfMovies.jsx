@@ -1,5 +1,5 @@
-export function ListOfMovies ({ movies, hasMovies }) {
-  if (!hasMovies) return <p>No movies found :(</p>
+export function ListOfMovies ({ movies }) {
+  if (movies.length === 0) return <p>No movies found :c</p>
 
   return (
     <ul className="movies">

@@ -10,8 +10,13 @@ export function useSearch () {
   }
 
   useEffect(() => {
-    if (!isInputUsed) {
+    if (!isInputUsed.current) {
       isInputUsed.current = search !== ''
+      return
+    }
+
+    if (search === '') {
+      setError('Cannot search for nothing')
       return
     }
 

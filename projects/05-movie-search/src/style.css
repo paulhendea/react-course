@@ -15,12 +15,23 @@ header {
 header form {
     display: flex;
     flex-flow: row wrap;
+    align-items: end;
     gap: .5rem;
 }
 
 header form input, 
 header form button {
     margin: 0;
+}
+header form input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .movies {

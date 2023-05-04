@@ -1,2 +1,2 @@
-export const API_KEY = 'cc2975aa'
-export const API_URL = 'http://www.omdbapi.com/'
+export const MOVIES_API_KEY = 'cc2975aa'
+export const MOVIES_API_URL = 'http://www.omdbapi.com/'

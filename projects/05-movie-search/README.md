@@ -8,12 +8,12 @@ APIs:
 
 Requirements:
 
-- An input to type and a button to search
-- Show a list with the matched movies (title, year, poster)
-- Show the movies in a responsive grid
+- [x] An input to type and a button to search
+- [x] Show a list with the matched movies (title, year, poster)
+- [x] Show the movies in a responsive grid
 
 Extra:
 
-- Avoid searching the same twice
-- Make the app search while typing
-- Avoid to search continuosly while typing (debounce)
+- [x] Avoid searching the same twice
+- [x] Make the app search while typing
+- [ ] Avoid to search continuosly while typing (debounce)
