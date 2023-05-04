@@ -16,4 +16,4 @@ Extra:
 
 - [x] Avoid searching the same twice
 - [x] Make the app search while typing
-- [ ] Avoid to search continuosly while typing (debounce)
+- [x] Avoid to search continuosly while typing (debounce)
