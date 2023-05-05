@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.filters > div {
+    display: flex;
+    gap: .5rem;
+}

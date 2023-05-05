@@ -6,6 +6,9 @@
   "scripts": {
     "lint": "eslint projects --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
+  "workspaces": [
+    "projects/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/paulhendea/react-course.git"

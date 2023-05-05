@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.footer {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(15px);
+}
+
+.footer span {
+  font-size: 14px;
+  color: #09f;
+}
+
+.footer h4,
+.footer p {
+  margin: 0;
+  display: flex;
+}
