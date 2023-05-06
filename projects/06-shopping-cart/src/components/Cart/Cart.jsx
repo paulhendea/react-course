@@ -1,12 +1,12 @@
 import { useId } from 'react'
-import { CartIcon, ClearCartIcon, RemoveFromCartIcon } from '../Icons/Icons'
+import { CartIcon, ClearCartIcon } from '../Icons/Icons'
 import './Cart.css'
 import { useCart } from '../../hooks/useCart'
 import { CartItem } from '../CartItem/CartItem'
 
 export function Cart () {
   const cartCheckboxId = useId()
-  const { cart, addToCart, clearCart } = useCart()
+  const { cart, addOneProduct, subtractOneProduct, clearCart } = useCart()
 
   return (
     <>
@@ -24,7 +24,8 @@ export function Cart () {
                     price={item.price}
                     title={item.title}
                     quantity={item.quantity}
-                    addQuantity={() => addToCart(item)}
+                    addQuantity={() => addOneProduct(item)}
+                    subtractQuantity={() => subtractOneProduct(item)}
                   />
                 </li>
             ))

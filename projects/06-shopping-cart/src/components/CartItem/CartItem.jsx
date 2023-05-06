@@ -1,20 +1,20 @@
 import './CartItem.css'
 
-export function CartItem ({ thumbnail, price, title, quantity, addQuantity }) {
+export function CartItem ({ thumbnail, price, title, quantity, addQuantity, subtractQuantity }) {
   return (
     <div className='cart-item'>
       <img src={thumbnail} alt={title} />
       <div className='cart-item-info'>
         <strong className='cart-item-title'>{title}</strong>
         <div className='cart-item-quantity'>
-          <button className='cart-item-quantity-minus'>
-            <span>-</span>
+          <button className='cart-item-quantity-minus' onClick={subtractQuantity}>
+            -
           </button>
           <div className='cart-item-quantity-value'>
             <span>{quantity}</span>
           </div>
-          <button className='cart-item-quantity-plus'>
-            <span>+</span>
+          <button className='cart-item-quantity-plus' onClick={addQuantity}>
+            +
           </button>
         </div>
       </div>

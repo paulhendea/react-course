@@ -1,34 +1,25 @@
-import { createContext, useState } from 'react'
+import { createContext } from 'react'
+import { useCartReducer } from '../hooks/useCartReducer'
 
 export const CartContext = createContext()
 
 export function CartProvider ({ children }) {
-  const [cart, setCart] = useState([])
-
-  const addToCart = (product) => {
-    console.log('addToCart', product)
-    setCart((previousCart) => [
-      ...previousCart,
-      {
-        ...product,
-        quantity: product.quantity + 1 || 1
-      },
-    ])
-  }
-  const removeFromCart = (product) => {
-    setCart((previous) => previous.filter((item) => item.id !== product.id))
-  }
-  const clearCart = () => {
-    setCart([])
-  }
-  const isProductInCart = (product) => {
-    return cart.some((item) => item.id === product.id)
-  }
+  const {
+    cart,
+    addToCart,
+    removeFromCart,
+    addOneProduct,
+    subtractOneProduct,
+    clearCart,
+    isProductInCart
+  } = useCartReducer()
 
   const contextInitialValue = {
     cart,
     addToCart,
     removeFromCart,
+    addOneProduct,
+    subtractOneProduct,
     clearCart,
     isProductInCart,
   }
