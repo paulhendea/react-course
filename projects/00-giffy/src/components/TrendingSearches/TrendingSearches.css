@@ -1,0 +1,14 @@
+.popular-categories {
+  margin-block-end: 2rem;
+}
+.popular-categories .popular-categories-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  list-style-type: none;
+}
+.popular-categories .popular-categories-list a {
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 2px solid rgb(var(--light-purple));
+}

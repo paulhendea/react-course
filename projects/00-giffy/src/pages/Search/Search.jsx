@@ -8,7 +8,7 @@ export function Search ({ keyword }) {
 
   return (
     <div className="Search">
-      <h1 className="Search-title">{keyword}</h1>
+      <h1 className="Search-title">{decodeURI(keyword)}</h1>
       {loading
         ? <Loading />
         : <ListOfGifs gifs={gifs} />}

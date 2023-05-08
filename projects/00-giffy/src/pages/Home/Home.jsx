@@ -1,11 +1,10 @@
-import { Link, useLocation } from 'wouter'
-import { useState } from 'react'
 import './Home.css'
+import { useLocation } from 'wouter'
+import { useState } from 'react'
 import { useGifs } from '../../hooks/useGifs'
 import { Loading } from '../../components/Loading/Loading'
 import { ListOfGifs } from '../../components/ListOfGifs/ListOfGifs'
-
-const POPULAR_GIFS = ['Anime', 'Avengers', 'Cats', 'Minions']
+import { LazyTrending } from '../../components/TrendingSearches/TrendingSearches'
 
 export function Home () {
   const [keyword, setKeyword] = useState('')
@@ -24,21 +23,9 @@ export function Home () {
 
   return (
     <div className="Home">
-      <section>
-        <h1 className="Home-title">Popular</h1>
-        <ul className="Home-list">
-          {POPULAR_GIFS.map((category) => {
-            return (
-              <li key={category}>
-                <Link to={`/search/${category}`}>{category} gifs</Link>
-              </li>
-            )
-          })}
-        </ul>
-      </section>
-      <section>
-        <h1 className='Home-title'>Search</h1>
-        <form className="Search-form" onSubmit={handleSubmit}>
+      <section className='search'>
+        <h1 className='section-title'>Search</h1>
+        <form className="search-form" onSubmit={handleSubmit}>
           <input
             type="text"
             value={keyword}
@@ -47,9 +34,13 @@ export function Home () {
           />
         </form>
       </section>
-      <section>
-        <h1 className="Home-title">Random GIFS</h1>
+      <section className='random-gifs'>
+        <h1 className="section-title">Random GIFS</h1>
         {loading ? <Loading /> : <ListOfGifs gifs={gifs} />}
+      </section>
+      <section className='popular-categories'>
+        <h1 className='section-title'>Popular GIFS</h1>
+        <LazyTrending />
       </section>
     </div>
   )
