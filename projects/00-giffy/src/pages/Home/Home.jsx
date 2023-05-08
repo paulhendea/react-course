@@ -24,20 +24,8 @@ export function Home () {
 
   return (
     <div className="Home">
-      <form className="Search-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={keyword}
-          onChange={handleChange}
-          placeholder="Search gifs"
-        />
-      </form>
       <section>
-        <h1 className="Home-title">Random GIFS</h1>
-        {loading ? <Loading /> : <ListOfGifs gifs={gifs} />}
-      </section>
-      <section>
-        <h1 className="Home-title">Popular GIFS</h1>
+        <h1 className="Home-title">Popular</h1>
         <ul className="Home-list">
           {POPULAR_GIFS.map((category) => {
             return (
@@ -47,6 +35,21 @@ export function Home () {
             )
           })}
         </ul>
+      </section>
+      <section>
+        <h1 className='Home-title'>Search</h1>
+        <form className="Search-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={keyword}
+            onChange={handleChange}
+            placeholder="Search gifs"
+          />
+        </form>
+      </section>
+      <section>
+        <h1 className="Home-title">Random GIFS</h1>
+        {loading ? <Loading /> : <ListOfGifs gifs={gifs} />}
       </section>
     </div>
   )

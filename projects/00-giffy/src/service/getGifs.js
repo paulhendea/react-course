@@ -1,15 +1,25 @@
-import { API_KEY } from './settings'
+import { API_BASE_URL, API_KEY } from '../constants'
 
-export function getGifs ({ keyword = 'minion' } = {}) {
-  const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=20&offset=0&rating=g&lang=en`
+export async function getGifs ({ keyword = 'minion' } = {}) {
+  const queryParams = new URLSearchParams({
+    api_key: API_KEY,
+    q: keyword,
+    limit: 20,
+    offset: 0,
+    rating: 'g',
+    lang: 'en',
+  })
+  const API_URL = `${API_BASE_URL}/v1/gifs/search?${queryParams}`
 
   return fetch(API_URL)
     .then((response) => response.json())
-    .then((result) =>
-      result.data.map((gif) => {
-        const { id, title, images } = gif
-        const { url } = images.downsized_medium
-        return { id, title, url }
-      })
-    )
+    .then((result) => result.data.map((gif) => {
+      const { id, title, images } = gif
+      const { url } = images.downsized_medium
+      return { id, title, url }
+    }))
+    .catch((error) => {
+      console.log(error)
+      return null
+    })
 }
