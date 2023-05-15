@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useGifs } from '../../hooks/useGifs'
 import { Loading } from '../../components/Loading/Loading'
 import { ListOfGifs } from '../../components/ListOfGifs/ListOfGifs'
-import { LazyTrending } from '../../components/TrendingSearches/TrendingSearches'
+import { LazyTrending } from '../../components/TrendingSearches/LazyTrendingSearches'
 
 export function Home () {
   const [keyword, setKeyword] = useState('')

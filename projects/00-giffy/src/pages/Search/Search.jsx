@@ -4,7 +4,9 @@ import { useGifs } from '../../hooks/useGifs'
 import './Search.css'
 
 export function Search ({ keyword }) {
-  const { loading, gifs } = useGifs({ keyword })
+  const { loading, gifs, setPage } = useGifs({ keyword })
+
+  const handleNextPage = () => setPage((previous) => previous + 1)
 
   return (
     <div className="Search">
@@ -12,6 +14,7 @@ export function Search ({ keyword }) {
       {loading
         ? <Loading />
         : <ListOfGifs gifs={gifs} />}
+      <button onClick={handleNextPage}>Next page</button>
     </div>
   )
 }

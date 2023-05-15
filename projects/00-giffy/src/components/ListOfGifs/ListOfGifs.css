@@ -1,21 +1,20 @@
-.GifList {
-  margin-block-start: 1rem;
-  column-count: 2;
+/* .GifList {
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: masonry;
   gap: 1rem;
+  margin-block-start: 1rem;
+} */
+
+.GifList {
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-block-start: 1rem;
 }
 
 .GifList .Gif {
   margin-block-end: 1rem;
-}
-
-@media screen and (min-width: 37.5rem) {
-  .GifList {
-    column-count: 3;
-  }
-}
-
-@media screen and (min-width: 60rem) {
-  .GifList {
-    column-count: 4;
-  }
 }

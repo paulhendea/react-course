@@ -1,11 +1,11 @@
 import { API_BASE_URL, API_KEY } from '../constants'
 
-export async function getGifs ({ keyword = 'minion' } = {}) {
+export async function getGifs ({ keyword = 'minion', limit = 25, page = 0 } = {}) {
   const queryParams = new URLSearchParams({
     api_key: API_KEY,
     q: keyword,
-    limit: 20,
-    offset: 0,
+    limit,
+    offset: page * limit + 1,
     rating: 'g',
     lang: 'en',
   })
