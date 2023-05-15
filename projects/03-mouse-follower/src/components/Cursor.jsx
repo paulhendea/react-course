@@ -4,8 +4,6 @@ export const Cursor = ({ enabled }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
-    console.log('useEffect', { enabled })
-
     const handleMove = (event) => {
       const { clientX, clientY } = event
       setPosition({ x: clientX, y: clientY })
@@ -16,7 +14,6 @@ export const Cursor = ({ enabled }) => {
     }
 
     return () => {
-      console.log('cleanup')
       window.removeEventListener('pointermove', handleMove)
     }
   }, [enabled])
