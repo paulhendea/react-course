@@ -4,6 +4,7 @@ Course repository 👉 [midudev/aprendiendo-react](https://github.com/midudev/ap
 
 ## TODO
 
+- Finish the course
 - Improve basic version of the projects
 - Create an index page with links to all projects
 - Deploy
